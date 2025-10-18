@@ -1,11 +1,23 @@
-<script setup></script>
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+   <header class="navbar">
+    <div>
+      <nav>
+        <RouterLink to="/">Posts</RouterLink> - 
+        <RouterLink to="/authors">Authors</RouterLink>
+      </nav>
+    </div>
+  </header> 
+
+  <RouterView />
 </template>
 
-<style scoped></style>
+<style>
+  .navbar {
+    background-color: lightgreen;
+    padding: 1.2rem;
+  }
+</style>
